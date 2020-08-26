@@ -15,16 +15,18 @@ $ git clone https://github.com/piyush-palta/network-intrusion-dataset-generator.
 ### Prerequisites
 Make sure you have installed all of the following prerequisites on your development machine:
 * Git - [Download & Install Git](https://git-scm.com/downloads). OSX and Linux machines typically have this already installed.
-* Python - [Download & Install Python](https://www.python.org/downloads/). For linux machines, you can also use this [Python Docs](https://docs.python-guide.org/starting/install3/linux/) to install Python.
-* pip - [Download & Install pip](https://pip.pypa.io/en/stable/installing/). Make sure you've installed python first.
+* Python3 - [Download & Install Python](https://www.python.org/downloads/). For linux machines, you can also use this [Python Docs](https://docs.python-guide.org/starting/install3/linux/) to install Python.
+* pip3 - [Download & Install pip](https://pip.pypa.io/en/stable/installing/). Make sure you've installed python first.
 * scapy - [Download & Install scapy](https://scapy.readthedocs.io/en/latest/installation.html). Make sure you install scapy with root priviledges. If you have installed pip you can use :
 ```bash
 $ pip install --pre scapy[basic]
 ```
 * tcpdump - [Download & Install tcpdump](https://scapy.readthedocs.io/en/latest/installation.html#platform-specific-instructions) 
 
-### Installing
+> Note: 
 
+### Installing
+> Make sure to run the below commands as root user. If on debian distros, just add `sudo` with the commands
 #### To use dataset generator in sniff mode :
 > You can specify three arguments 
 > * --time : Refers to the duration in seconds of sniffing. (Required)
@@ -59,6 +61,8 @@ $ python pcap_to_csv.py --pcap='/sample.pcap'
 ```bash
 $ python pcap_to_csv.py --pcap='/sample.pcap' --csv='/home/path/out.csv' 
 ```
+
+> Note : If `python` command doesn't work, try using `python3` 
 
 ### Future development Strategy
 * The current implementation is more like a proof of concept & just a beginning of generalized dataset generator for Intrusion Detection Systems. Further development to cover up every aspect in detail i.e. configuring sniffing with filters etc will be taken up in the future.
